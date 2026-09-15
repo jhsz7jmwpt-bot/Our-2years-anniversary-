@@ -215,7 +215,7 @@ For PU TUU LAY
 
     <!-- Main Content Screen -->
     <div id="main-content">
-        <h1>Happy 2nd Anniversary! ❤️</h1>
+        <h1>Happy 2years Anniversary! ❤️</h1>
         <p class="subtitle">ငါတို့နှစ်ယောက်ရဲ့ အမှတ်တရနေ့လေး</p>
 
         <!-- Day Counter -->
@@ -226,9 +226,9 @@ For PU TUU LAY
 
         <!-- Slideshow Gallery -->
         <div class="slideshow-container">
-            <div class="slide"><img src="" alt="Photo 1"></div>
-            <div class="slide"><img src="photo2.jpg" alt="Photo 2"></div>
-            <div class="slide"><img src="photo3.jpg" alt="Photo 3"></div>
+            <div class="slide"><img src="IMG_5281.jpeg" alt="Photo 1"></div>
+            <div class="slide"><img src="IMG_5273.jpeg" alt="Photo 2"></div>
+            <div class="slide"><img src="IMG_2334.jpg" alt="Photo 3"></div>
 
             <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
             <a class="next" onclick="moveSlide(1)">&#10095;</a>
