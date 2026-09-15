@@ -3,6 +3,9 @@ For PU TUU LAY
 <!DOCTYPE html>
 <html lang="my">
 <head>
+    <link rel="apple-touch-icon" href="IMG_1064.jpeg">
+<link rel="icon" type="image/jpeg" href="IMG_2304.jpeg">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our 2nd Anniversary 💕</title>
