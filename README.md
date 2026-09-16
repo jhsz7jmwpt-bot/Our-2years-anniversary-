@@ -207,7 +207,7 @@
         <p style="margin-bottom: 15px; color: #666;">ဖွင့်ရန် Passcode ထည့်ပါ</p>
         <input type="password" id="passcode-input" class="pass-input" placeholder="••••" maxlength="10">
         <br>
-        <button class="btn-unlock" onclick="checkPasscode()">ဖွင့်ပါဗျ 🫰🏻❤️</button>
+        <button class="btn-unlock" onclick="checkPasscode()">ဖွင့်ပါဗျ 🫰🏻❤️</button>
         <p id="error-msg" class="error-msg">Passcode မှားယွင်းနေပါသည်။ ပြန်ကြိုးစားပါ။</p>
     </div>
 
@@ -224,9 +224,9 @@
 
         <!-- Slideshow Gallery -->
         <div class="slideshow-container">
-            <div class="slide"><img src="photo1.jpg" alt="Photo 1"></div>
-            <div class="slide"><img src="photo2.jpg" alt="Photo 2"></div>
-            <div class="slide"><img src="photo3.jpg" alt="Photo 3"></div>
+            <div class="slide"><img src="IMG_1064.jpeg" alt="Photo 1"></div>
+            <div class="slide"><img src="IMG_1382.jpeg" alt="Photo 2"></div>
+            <div class="slide"><img src="IMG_2334.jpeg" alt="Photo 3"></div>
 
             <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
             <a class="next" onclick="moveSlide(1)">&#10095;</a>
@@ -235,13 +235,14 @@
         <!-- Message Box -->
         <div class="letter-box">
             <p><b>ချစ်ရတဲ့သူလေးသို့... 💌</b></p><br>
-            <p>ငါတို့နှစ်ယောက် အတူတူလက်တွဲလာတာ အခုဆိုရင် ၂ နှစ်တိုင်ခဲ့ပြီနော်။ ဒီအချိန်တွေအတွင်းမှာ ပျော်စရာတွေ၊ ရန်ဖြစ်လိုက် ပြန်စလိုက်နဲ့ အမှတ်တရတွေအများကြီး ဖန်တီးခဲ့ကြတယ်။ ငါ့ဘေးမှာ အမြဲရှိပေးပြီး နားလည်ပေးလို့ ကျေးဇူးအများကြီးတင်ပါတယ်။ ရှေ့ဆက်ပြီးတော့လည်း အကြာကြီး လက်တွဲသွားကြရအောင်နော်။ ချစ်တယ်! ❤️</p>
+            <p>ကိုကိုတို့နှစ်ယောက် အတူတူလက်တွဲလာတာ အခုဆိုရင် ၂ နှစ်တိုင်ခဲ့ပြီနော်။ ဒီအချိန်တွေအတွင်းမှာ ပျော်စရာတွေ၊ ရန်ဖြစ်လိုက် ပြန်ချစ်လိုက်နဲ့ အမှတ်တရတွေအများကြီး ဖန်တီးခဲ့ကြတယ်။ ကိုကို့ဘေးမှာ အမြဲရှိပေးပြီး နားလည်ပေးလို့ ကျေးဇူးအများကြီးတင်ပါတယ်။ ရှေ့ဆက်ပြီးတော့လည်း အကြာကြီး လက်တွဲသွားကြရအောင်နော်။ အများကြီးချစ်တယ်နော်! 😚❤️</p>
         </div>
 
         <!-- Buttons -->
         <div class="controls">
             <button class="btn-action" onclick="toggleAudio()">🎵 Music Play / Pause</button>
-            <button class="btn-action" onclick="createHearts()">Click Me! ❤️</button>
+            
+            <button class="btn-action" onclick="createHearts()">အချစ်တွေယူပါ😜! ❤️</button>
         </div>
     </div>
 
@@ -252,7 +253,7 @@
 
     <script>
         // 1. Passcode စစ်ဆေးခြင်း
-        const CORRECT_PASSCODE = "250924"; // ဒီနေရာမှာ ကြိုက်နှစ်သက်ရာ Passcode ပြောင်းပါ
+        const CORRECT_PASSCODE = "250924";
 
         function checkPasscode() {
             const input = document.getElementById('passcode-input').value;
@@ -265,7 +266,6 @@
                 updateCounter();
                 showSlides(slideIndex);
                 
-                // Passcode မှန်ရင် သီချင်းအလိုအလျောက် ပွင့်မည်
                 music.play().catch(() => {
                     console.log("Autoplay was prevented by browser.");
                 });
@@ -275,7 +275,7 @@
         }
 
         // 2. Day Counter
-        const startDate = new Date(2024, 8, 25); // မိမိတို့ စတင်တွဲခဲ့သည့် (နှစ်, လ-၁, ရက်)
+        const startDate = new Date(2024, 8, 25);
 
         function updateCounter() {
             const today = new Date();
@@ -301,7 +301,6 @@
             slides[slideIndex-1].style.display = "block";
         }
 
-        // Auto Slide (၅ စက္ကန့်တစ်ခါ အလိုအလျောက် ပုံပြောင်းမည်)
         setInterval(() => {
             if(document.getElementById('main-content').style.display === 'block') {
                 moveSlide(1);
@@ -318,7 +317,7 @@
             }
         }
 
-        // 5. Floating Hearts Animation
+        // 5. Floating Hearts Animation (Click Me နှိပ်လျှင် အလုပ်လုပ်သည့် Code)
         function createHearts() {
             for (let i = 0; i < 15; i++) {
                 setTimeout(() => {
