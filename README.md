@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our 2nd Anniversary 💕</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="IMG_1064.jpeg">
     <style>
         * {
             box-sizing: border-box;
