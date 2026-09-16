@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="my">
 <head>
-     <link rel="apple-touch-icon" href="./IMG_1064.jpeg">
-<link rel="icon" type="image/jpeg" href="./IMG_1064.jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our 2nd Anniversary 💕</title>
@@ -74,7 +72,7 @@
             display: none;
         }
 
-        /* Main Content Screen (Hidden by default) */
+        /* Main Content Screen */
         #main-content {
             display: none;
             max-width: 600px;
@@ -166,6 +164,57 @@
             box-shadow: inset 0 0 8px rgba(0,0,0,0.03);
         }
 
+        /* Coupons Section */
+        .coupon-section-title {
+            color: #e63946;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        .coupons-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .coupon-card {
+            background: #fff0f3;
+            border: 2px dashed #ff4d6d;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .coupon-card h3 {
+            font-size: 0.95em;
+            color: #c9184a;
+            margin-bottom: 5px;
+        }
+
+        .coupon-card p {
+            font-size: 0.75em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .btn-coupon {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.8em;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-coupon.used {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
         /* Controls */
         .controls {
             display: flex;
@@ -228,7 +277,7 @@
         <div class="slideshow-container">
             <div class="slide"><img src="IMG_1064.jpeg" alt="Photo 1"></div>
             <div class="slide"><img src="IMG_1382.jpeg" alt="Photo 2"></div>
-            <div class="slide"><img src="IMG_2334.jpeg" alt="Photo 3"></div>
+            <div class="slide"><img src="IMG_2304.jpeg" alt="Photo 3"></div>
 
             <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
             <a class="next" onclick="moveSlide(1)">&#10095;</a>
@@ -237,14 +286,38 @@
         <!-- Message Box -->
         <div class="letter-box">
             <p><b>ချစ်ရတဲ့သူလေးသို့... 💌</b></p><br>
-            <p>ကိုကိုတို့နှစ်ယောက် အတူတူလက်တွဲလာတာ အခုဆိုရင် ၂ နှစ်တိုင်ခဲ့ပြီနော်။ ဒီအချိန်တွေအတွင်းမှာ ပျော်စရာတွေ၊ ရန်ဖြစ်လိုက် ပြန်ချစ်လိုက်နဲ့ အမှတ်တရတွေအများကြီး ဖန်တီးခဲ့ကြတယ်။ ကိုကို့ဘေးမှာ အမြဲရှိပေးပြီး နားလည်ပေးလို့ ကျေးဇူးအများကြီးတင်ပါတယ်။ ရှေ့ဆက်ပြီးတော့လည်း အကြာကြီး လက်တွဲသွားကြရအောင်နော်။ အများကြီးချစ်တယ်နော်! 😚❤️</p>
+            <p>ကိုကိုတို့နှစ်ယောက် အတူတူလက်တွဲလာတာ အခုဆိုရင် ၂ နှစ်တိုင်ခဲ့ပြီနော်။ ဒီအချိန်တွေအတွင်းမှာ ပျော်စရာတွေ၊ ရန်ဖြစ်လိုက် ပြန်ချစ်လိုက်နဲ့ အမှတ်တရတွေအများကြီး ဖန်တီးခဲ့ကြတယ်။ ငါ့ဘေးမှာ အမြဲရှိပေးပြီး နားလည်ပေးလို့ ကျေးဇူးအများကြီးတင်ပါတယ်။ ရှေ့ဆက်ပြီးတော့လည်း အကြာကြီး လက်တွဲသွားကြရအောင်နော်။ အများကြီးချစ်တယ်! 🫰🏻😚❤️</p>
+        </div>
+
+        <!-- Love Coupons Section -->
+        <h2 class="coupon-section-title">🎟️ Love Coupons For You</h2>
+        <div class="coupons-container">
+            <div class="coupon-card">
+                <h3>🤗 Free Hug & Kiss</h3>
+                <p>ဘယ်အချိန်မဆို ဖက်ခွင့်နဲ့ နမ်းခွင့် ၃ ကြိမ်</p>
+                <button class="btn-coupon" onclick="useCoupon(this)">Use Coupon</button>
+            </div>
+            <div class="coupon-card">
+                <h3>👑 Wish Grant Card</h3>
+                <p>ကိုကို့ကို ကြိုက်တာခိုင်းခွင့် (ငြင်းပိုင်ခွင့်မရှိ)</p>
+                <button class="btn-coupon" onclick="useCoupon(this)">Use Coupon</button>
+            </div>
+            <div class="coupon-card">
+                <h3>🍿 Movie & Treat</h3>
+                <p>ကြိုက်တဲ့ ရုပ်ရှင်ကြည့်/ကြိုက်တာစားခွင့်(တွေ့ရချိန်)</p>
+                <button class="btn-coupon" onclick="useCoupon(this)">Use Coupon</button>
+            </div>
+            <div class="coupon-card">
+                <h3>🥺 Forgiveness Card</h3>
+                <p>စိတ်ဆိုးရင် အပြစ်မယူဘဲ ခွင့်လွှတ်ရမည်</p>
+                <button class="btn-coupon" onclick="useCoupon(this)">Use Coupon</button>
+            </div>
         </div>
 
         <!-- Buttons -->
         <div class="controls">
             <button class="btn-action" onclick="toggleAudio()">🎵 Music Play / Pause</button>
-            
-            <button class="btn-action" onclick="createHearts()">အချစ်တွေယူပါ😜! ❤️</button>
+            <button class="btn-action" onclick="createHearts()">အချစ်တွေယူပါ! 🫰🏻❤️</button>
         </div>
     </div>
 
@@ -319,7 +392,16 @@
             }
         }
 
-        // 5. Floating Hearts Animation (Click Me နှိပ်လျှင် အလုပ်လုပ်သည့် Code)
+        // 5. Coupon Functionality
+        function useCoupon(btn) {
+            if (!btn.classList.contains('used')) {
+                btn.innerText = 'Redeemed ✨';
+                btn.classList.add('used');
+                createHearts();
+            }
+        }
+
+        // 6. Floating Hearts Animation
         function createHearts() {
             for (let i = 0; i < 15; i++) {
                 setTimeout(() => {
